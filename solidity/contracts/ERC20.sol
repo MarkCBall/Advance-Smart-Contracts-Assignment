@@ -1,5 +1,6 @@
 pragma solidity 0.5.0;
 
+//code taken from https://theethereum.wiki/w/index.php/ERC20_Token_Standard
 library SafeMath {
     function add(uint a, uint b) internal pure returns (uint c) {
         c = a + b;
@@ -19,6 +20,7 @@ library SafeMath {
     }
 }
 
+//code taken from https://theethereum.wiki/w/index.php/ERC20_Token_Standard
 contract ERC20{
 
     using SafeMath for uint;
