@@ -1,5 +1,9 @@
 # stateChannelCheckers
 
+## Initializing the game
+The game is initialized with users selecting the address of the rules of the game or the "validating contract".
+The game can be playing with any ERC20 token as a bet.
+
 ## The board is state is represented by a singles bytes32 or uint. The first 8 bytes represent information about the previous move and the remaining bytes represent the boardgame pieces.
 
 
