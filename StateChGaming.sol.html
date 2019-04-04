@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/StateChGaming.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> StateChGaming.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>37/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.88% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>31/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>42/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity 0.5.0;
+&nbsp;
+import "./ValidatingContract.sol";
+// contract ValidatingContract{
+//     function validStateUpdate(uint256, uint256) public pure returns(bool){}
+//     function p1Won(uint) public pure returns(bool){}
+//     function p1MovedLast(uint) public pure returns (bool){}
+//     function gameTied(uint) public pure returns(bool){}
+//     function getNonce(uint) public pure returns(uint){}
+// }
+&nbsp;
+import "./ERC20.sol";
+&nbsp;
+contract StateChGaming {
+&nbsp;
+    struct game{
+        uint256 gamePayout;
+        ERC20 tokenAddr;
+        uint256 state;
+        address p1;
+        address p2;
+        uint256 blockNum;
+        ValidatingContract vcAddr;
+        uint256 blocksPerTurn;
+    }
+    mapping (uint256 =&gt; game) public allGames;
+&nbsp;
+     modifier opponentLastPlayed(uint _gameID, uint _state) {
+        game memory gm = allGames[_gameID];
+        if (gm.vcAddr.p1MovedLast(gm.state)){
+            require (msg.sender == gm.p2,"msg sender is invalid");
+        }else{
+            require(msg.sender == gm.p1, "msg sender is invalid");
+        }
+        _;
+    }
+    modifier senderLastPlayed(uint _gameID) {
+        game memory gm = allGames[_gameID];
+        if (gm.vcAddr.p1MovedLast(gm.state)){
+            require (msg.sender == gm.p1, "msg sender is invalid");
+        }else{
+            require(msg.sender == gm.p2,"msg sender is invalid");
+        }
+        _;
+    }
+    modifier validMove(uint _gameID, uint _state){
+        uint tempstate = _state;
+        require (allGames[_gameID].vcAddr.validStateUpdate(allGames[_gameID].state, tempstate), "invalid state update");
+        _;
+    }
+&nbsp;
+    function addrFromHashAndSig(bytes32 DataHash, uint8 v, bytes32 r, bytes32 s) private pure returns(address) {
+        bytes memory prefix = "\x19Ethereum Signed Message:\n32";
+        bytes32 prefixedHash = keccak256(abi.encodePacked(prefix, DataHash));
+        return ecrecover(prefixedHash, v, r, s);
+    }
+&nbsp;
+    function initGame(uint256 _stakedAmount, ERC20 _erc20Addr, uint256 _gameID, address _p1, address _p2, ValidatingContract _vcAddr, uint256 _blocksPerTurn, uint8 _v, bytes32 _r, bytes32 _s) public {
+        require(_erc20Addr.transferFrom(_p1, address(this),_stakedAmount),"not enough funds");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_erc20Addr.transferFrom(_p2, address(this),_stakedAmount),"not enough funds");
+        
+        bytes32 DataHash = keccak256(abi.encodePacked(_stakedAmount, _erc20Addr,_gameID, _p1, _p2, _vcAddr, _blocksPerTurn));
+        address calcAddr = addrFromHashAndSig(DataHash, _v,_r,_s);
+        require(_p1 == calcAddr || _p1 == msg.sender, "a player didnt sign or send");
+        require(_p2 == calcAddr || _p2 == msg.sender, "a player didnt sign or send");
+&nbsp;
+        //require the gameID doesn't already exist
+        require (allGames[_gameID].p1 == address(0), "can not have duplicate gameIDs");
+        //starting board state is 0x000000000000000080828486898b8d8f90929496a9abadafb0b2b4b6b9bbbdbf or 3151051977652667687974785799204386029420487659316301249983
+        allGames[_gameID] = game(_stakedAmount*2, _erc20Addr, 3151051977652667687974785799204386029420487659316301249983, _p1, _p2, 100000000000000000000000000000, _vcAddr, _blocksPerTurn);
+    }
+&nbsp;
+    function initBCMove(uint _gameID, uint _state, uint8 _v, bytes32 _r, bytes32 _s) public {
+        game memory gm = allGames[_gameID];
+        bytes32 DataHash = keccak256(abi.encodePacked(_gameID,_state));
+        address calcAddr = addrFromHashAndSig(DataHash, _v,_r,_s);
+        require(gm.p1 == calcAddr || gm.p1 == msg.sender,"a player didnt sign or send");
+        require(gm.p2 == calcAddr || gm.p2 == msg.sender,"a player didnt sign or send");
+&nbsp;
+        //require that the new nonce is &gt; the old nonce
+        require(gm.vcAddr.getNonce(_state) &gt; gm.vcAddr.getNonce(gm.state),"a new board must be at a higher turnNum");
+        allGames[_gameID].blockNum = block.number;
+        allGames[_gameID].state = _state;
+    }
+&nbsp;
+    //this function is needed in case you give the BC and unenforced move and the opponent doesn't continue to play
+    function makeMoveTimed(uint _gameID) public senderLastPlayed(_gameID) {
+        allGames[_gameID].blockNum = block.number;
+    }
+    function makeMoveUntimed(uint _gameID) public senderLastPlayed(_gameID) {
+        allGames[_gameID].blockNum = 100000000000000000000000000000;
+    }
+    
+    function enforcedBCMove(uint _gameID, uint _state) public opponentLastPlayed(_gameID, _state) validMove(_gameID, _state){
+        allGames[_gameID].blockNum = block.number;
+        allGames[_gameID].state = _state;
+    }
+&nbsp;
+    function unenforcedBCMove(uint _gameID, uint _state) public opponentLastPlayed(_gameID, _state) validMove(_gameID, _state){
+        allGames[_gameID].blockNum = 100000000000000000000000000000;
+        allGames[_gameID].state = _state;
+    }
+        
+    function payoutVictory(uint _gameID) public{
+        game memory gm = allGames[_gameID];
+        //if p1Won doesn't revert then
+        if (gm.vcAddr.p1Won(gm.state)){
+            gm.tokenAddr.transfer(gm.p1, gm.gamePayout);
+        }
+        else{
+            gm.tokenAddr.transfer(gm.p2, gm.gamePayout);
+        }
+    }
+       
+    //    NOT IMPLIMENTED
+    // function payoutTimeout(uint _gameID) public {
+    //     game memory gm = allGames[_gameID];
+    //     require (block.number &gt; (gm.blockNum + gm.blocksPerTurn), "can't currently pay out due to timeout");
+    //     if (gm.vcAddr.p1MovedLast(gm.state)){
+    //         gm.tokenAddr.transfer(gm.p1, gm.gamePayout);
+    //     }else{
+    //         gm.tokenAddr.transfer(gm.p2, gm.gamePayout);
+    //     }
+    // }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 03 2019 20:58:55 GMT-0400 (Eastern Daylight Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
