@@ -1,3 +1,10 @@
+A frontend can be found at http://52.60.66.253:5000/ (Please note that the second player is not able to accept a game due to a minor front-end bug)
+
+The contracts are deployed on ropsten:
+StateChGamingAddr = "0x90b8d184c1d4179e59b9d21fce1201704cac255c"
+ValidatingContract = "0xe82a2dc855352bc1ef93e3a0be4dbcd36cde22ff"
+ERC20 = "0x9e64aa3c10d0e6f14c384b0e5d72fa1a77ca3f79"
+
 # stateChannelCheckers
 
 ## Initializing the game
